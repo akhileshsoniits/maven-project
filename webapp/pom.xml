@@ -4,17 +4,17 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example.maven-project</groupId>
-  <artifactId>maven-project</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Maven Parent Project</name>
-  <description>Parent POM for Maven multi-module project</description>
+  <parent>
+    <groupId>com.example.maven-project</groupId>
+    <artifactId>maven-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
 
-  <modules>
-    <module>server</module>
-    <module>webapp</module>
-  </modules>
+  <artifactId>webapp</artifactId>
+  <packaging>jar</packaging>
+  <name>Web Application Module</name>
+  <description>Web application logic and UI</description>
 
   <build>
     <plugins>
